@@ -3,125 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Enhanced Portfolio</title>
+  <title>Data Science Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    // TailwindCSS Dark Mode Toggle
-    tailwind.config = {
-      darkMode: 'class',
-    };
-  </script>
 </head>
-<body class="min-h-screen bg-gray-50 dark:bg-gray-900 dark:text-white">
+<body class="min-h-screen bg-gray-50">
 
-  <!-- Navigation -->
-  <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white sticky top-0 z-50">
+  <!-- Hero Section -->
+  <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center space-x-2">
         <span class="text-3xl font-bold">🧠</span>
-        <span class="text-xl font-bold">Enhanced Portfolio</span>
+        <span class="text-xl font-bold">DataSci Portfolio</span>
       </div>
       <div class="flex space-x-4">
-        <a href="#projects" class="hover:text-blue-200">Projects</a>
-        <a href="#skills" class="hover:text-blue-200">Skills</a>
-        <a href="#testimonials" class="hover:text-blue-200">Testimonials</a>
-        <a href="#contact" class="hover:text-blue-200">Contact</a>
-        <button id="darkModeToggle" class="hover:text-blue-200">🌙</button>
+        <a href="https://github.com" target="_blank" class="hover:text-blue-200">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" class="hover:text-blue-200">LinkedIn</a>
+        <a href="mailto:contact@example.com" class="hover:text-blue-200">Email</a>
       </div>
     </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center py-20">
-    <div class="container mx-auto px-6">
+    <div class="container mx-auto px-6 py-20 text-center">
       <h1 class="text-5xl font-bold mb-4">Data Scientist & ML Engineer</h1>
       <p class="text-xl mb-8">Transforming data into actionable insights through machine learning</p>
-      <a href="#projects" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">View Projects</a>
+      <button class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+        View Projects
+      </button>
     </div>
-  </section>
+  </header>
 
-  <!-- Projects Section (Unchanged) -->
-  <section id="projects" class="py-20 container mx-auto px-6">
+  <!-- Projects Section -->
+  <section class="py-20 container mx-auto px-6">
     <h2 class="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2000" alt="Customer Churn Prediction" class="w-full h-48 object-cover" />
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">Customer Churn Prediction</h3>
-          <p class="text-gray-600 mb-4">Developed a machine learning model to predict customer churn with 94% accuracy using XGBoost</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">Python</span>
-            <span class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">Scikit-learn</span>
-            <span class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">XGBoost</span>
-            <span class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">Pandas</span>
-          </div>
-        </div>
-      </div>
-      <!-- Add more projects here as required -->
-    </div>
+    <div id="projects" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
   </section>
 
-  <!-- Skills Section (Unchanged) -->
-  <section id="skills" class="bg-gray-100 dark:bg-gray-800 py-20">
+  <!-- Skills Section -->
+  <section class="bg-gray-100 py-20">
     <div class="container mx-auto px-6">
       <h2 class="text-3xl font-bold mb-12 text-center">Technical Skills</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-bold mb-4">Languages</h3>
-          <ul class="space-y-2">
-            <li>Python</li>
-            <li>R</li>
-            <li>SQL</li>
-            <li>Julia</li>
-          </ul>
-        </div>
-        <!-- Add more skills categories here as required -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section id="testimonials" class="py-20 container mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-12 text-center">What People Say</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-white rounded-lg p-6 shadow-md text-center">
-        <p>"Excellent work and dedication!"</p>
-        <p class="mt-2 font-bold">- Jane Doe</p>
-      </div>
-      <div class="bg-white rounded-lg p-6 shadow-md text-center">
-        <p>"One of the best data scientists I’ve worked with."</p>
-        <p class="mt-2 font-bold">- John Smith</p>
-      </div>
-      <!-- Add more testimonials as needed -->
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="bg-gray-100 dark:bg-gray-800 py-20">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
-      <form id="contactForm" class="max-w-lg mx-auto space-y-4">
-        <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg border dark:bg-gray-700" required />
-        <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg border dark:bg-gray-700" required />
-        <textarea placeholder="Your Message" class="w-full p-3 rounded-lg border dark:bg-gray-700" rows="5" required></textarea>
-        <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-          Send Message
-        </button>
-      </form>
+      <div id="skills" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-gray-800 text-white py-8">
     <div class="container mx-auto px-6 text-center">
-      <p>© 2025 Enhanced Portfolio. All rights reserved.</p>
+      <p>© 2024 Data Science Portfolio. All rights reserved.</p>
     </div>
   </footer>
-
-  <!-- Back-to-Top Button -->
-  <button id="backToTop" class="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hidden">
-    ⬆️
-  </button>
 
   <script src="script.js"></script>
 </body>
