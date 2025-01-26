@@ -3,53 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data Science Portfolio</title>
+  <title>Enhanced Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // TailwindCSS Dark Mode Toggle
+    tailwind.config = {
+      darkMode: 'class',
+    };
+  </script>
 </head>
-<body class="min-h-screen bg-gray-50">
+<body class="min-h-screen bg-gray-50 dark:bg-gray-900 dark:text-white">
 
-  <!-- Hero Section -->
-  <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+  <!-- Navigation -->
+  <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white sticky top-0 z-50">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center space-x-2">
         <span class="text-3xl font-bold">🧠</span>
-        <span class="text-xl font-bold">DataSci Portfolio</span>
+        <span class="text-xl font-bold">Enhanced Portfolio</span>
       </div>
       <div class="flex space-x-4">
-        <a href="https://github.com/shreydalal" target="_blank" class="hover:text-blue-200">GitHub</a>
-        <a href="https://linkedin.com/in/shreydalal31" target="_blank" class="hover:text-blue-200">LinkedIn</a>
-        <a href="mailto:shreydalal53@gmail.com" class="hover:text-blue-200">Email</a>
+        <a href="#projects" class="hover:text-blue-200">Projects</a>
+        <a href="#skills" class="hover:text-blue-200">Skills</a>
+        <a href="#testimonials" class="hover:text-blue-200">Testimonials</a>
+        <a href="#contact" class="hover:text-blue-200">Contact</a>
+        <button id="darkModeToggle" class="hover:text-blue-200">🌙</button>
       </div>
     </nav>
-    <div class="container mx-auto px-6 py-20 text-center">
-      <h1 class="text-5xl font-bold mb-4">Data Scientist & ML Engineer</h1>
-      <p class="text-xl mb-8">Transforming data into actionable insights through machine learning</p>
-      <button class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-        View Projects
-      </button>
-    </div>
   </header>
 
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center py-20">
+    <div class="container mx-auto px-6">
+      <h1 class="text-5xl font-bold mb-4">Data Scientist & ML Engineer</h1>
+      <p class="text-xl mb-8">Transforming data into actionable insights through machine learning</p>
+      <a href="#projects" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">View Projects</a>
+    </div>
+  </section>
+
   <!-- Projects Section -->
-  <section class="py-20 container mx-auto px-6">
+  <section id="projects" class="py-20 container mx-auto px-6">
     <h2 class="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
-    <div id="projects" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    <div id="projectsContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
   </section>
 
   <!-- Skills Section -->
-  <section class="bg-gray-100 py-20">
+  <section id="skills" class="bg-gray-100 dark:bg-gray-800 py-20">
     <div class="container mx-auto px-6">
       <h2 class="text-3xl font-bold mb-12 text-center">Technical Skills</h2>
-      <div id="skills" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+      <div id="skillsContainer" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-20 container mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-12 text-center">What People Say</h2>
+    <div id="testimonialsContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gray-100 dark:bg-gray-800 py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
+      <form id="contactForm" class="max-w-lg mx-auto space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg border dark:bg-gray-700" required />
+        <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg border dark:bg-gray-700" required />
+        <textarea placeholder="Your Message" class="w-full p-3 rounded-lg border dark:bg-gray-700" rows="5" required></textarea>
+        <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+          Send Message
+        </button>
+      </form>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-gray-800 text-white py-8">
     <div class="container mx-auto px-6 text-center">
-      <p>© 2024 Data Science Portfolio. All rights reserved.</p>
+      <p>© 2025 Enhanced Portfolio. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Back-to-Top Button -->
+  <button id="backToTop" class="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hidden">
+    ⬆️
+  </button>
 
   <script src="script.js"></script>
 </body>
