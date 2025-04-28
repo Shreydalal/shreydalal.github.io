@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { FileText, GitHub, Linkedin } from 'lucide-react';
+import { FileText, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const AboutMe = () => {

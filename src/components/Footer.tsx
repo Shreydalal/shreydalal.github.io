@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Linkedin, GitHub, Mail } from 'lucide-react';
+import { Linkedin, Github, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -28,7 +27,7 @@ const Footer = () => {
                 className="w-8 h-8 rounded-full bg-slate-800 hover:bg-blue-600 flex items-center justify-center text-white transition-colors"
                 aria-label="GitHub"
               >
-                <GitHub className="w-4 h-4" />
+                <Github className="w-4 h-4" />
               </a>
               <a 
                 href="mailto:contact@aiexpert.com" 
