@@ -15,11 +15,11 @@ const Hero = () => {
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-16 z-10">
         <div className="flex-1 text-center lg:text-left">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            I Build <span className="text-gradient">AI Solutions</span> That Automate, Accelerate, and Empower Businesses
+            I Build <span className="text-gradient">AI Solutions</span> That Automate Workflows, Supercharge Productivity, and Drive Growth
           </h1>
           
           <p className="text-slate-600 text-lg md:text-xl mb-10 max-w-2xl mx-auto lg:mx-0">
-            Helping companies save time and increase efficiency through custom chatbots, 
+            Helping businesses save time and increase efficiency through custom chatbots, 
             RAG implementations, and intelligent workflow automation.
           </p>
           
@@ -27,18 +27,18 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg"
-              onClick={() => window.location.href = '#contact'}
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Work With Me <ArrowRight className="ml-2 h-5 w-5" />
+              Let's Work Together <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             
             <Button 
               variant="outline" 
               size="lg" 
               className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg"
-              onClick={() => window.location.href = '#portfolio'}
+              onClick={() => window.open('/ai-services-brochure.pdf', '_blank')}
             >
-              See My Work
+              Download AI Services Brochure
             </Button>
           </div>
         </div>
