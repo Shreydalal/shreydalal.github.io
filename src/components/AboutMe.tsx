@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { FileText, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -53,7 +52,7 @@ const AboutMe = () => {
               </Button>
               
               <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
-                <GitHub className="mr-2 h-4 w-4" />
+                <Github className="mr-2 h-4 w-4" />
                 GitHub
               </Button>
             </div>
