@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { MessageSquare, Code, Database, Briefcase, BarChart } from 'lucide-react';
+import { MessageSquare, Code, Database, Briefcase, BarChart, ShieldCheck } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const Services = () => {
@@ -29,7 +29,13 @@ const Services = () => {
       icon: BarChart,
       title: "Data Analysis and Reporting using AI",
       description: "Transform raw data into actionable business intelligence. Automated reporting systems that highlight key trends, anomalies, and opportunities hidden in your business data."
+    },
+    {
+      icon: ShieldCheck,
+      title: "AI-Powered Compliance & Risk Monitoring",
+      description: "Automatically monitor regulatory compliance and detect potential risks using AI. Stay ahead of audits, minimize legal exposure, and ensure your operations align with industry standards."
     }
+    
   ];
 
   return (
